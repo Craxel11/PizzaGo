@@ -38,7 +38,14 @@ class Login {
     }
 
     this.mostrarMensaje("¡Bienvenido! Redirigiendo...", true);
-    setTimeout(() => { window.location.href = "cliente.html"; }, 1000);
+
+    localStorage.setItem("usuario", valor);
+    localStorage.setItem("usuarioCliente", valor);
+    localStorage.setItem("nombreCliente", valor);
+
+    setTimeout(() => {
+      window.location.href = "cliente.html";
+    }, 1000);
   }
 }
 
